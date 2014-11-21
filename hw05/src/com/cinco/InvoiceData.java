@@ -11,17 +11,16 @@ import java.sql.Statement;
  *
  */
 public class InvoiceData {
-	
-	public static String driver = "com.mysql.jdbc.Driver";
-	public static String url = "jdbc:mysql://localhost:3306/wcao";
-	public static String user = "wcao";
-	public static String password = "ZqfP{C";
-	
+
 	/**
 	 * Method that removes every person record from the database
 	 */
 	public static void removeAllPersons() {
 		
+		String driver = "com.mysql.jdbc.Driver";
+		String url = "jdbc:mysql://localhost:3306/invoicedb";
+		String user = "root";
+		String password = "66wz66wz";
 
 		try {
 			Class.forName(driver);
@@ -51,6 +50,10 @@ public class InvoiceData {
 	 */
 	public static void removePerson(String personCode) {
 		
+		String driver = "com.mysql.jdbc.Driver";
+		String url = "jdbc:mysql://localhost:3306/invoicedb";
+		String user = "root";
+		String password = "66wz66wz";
 
 		try {
 			Class.forName(driver);
@@ -87,6 +90,10 @@ public class InvoiceData {
 	public static void addPerson(String personCode, String firstName, String lastName, 
 			String street, String city, String state, String zip, String country) {
 		
+		String driver = "com.mysql.jdbc.Driver";
+		String url = "jdbc:mysql://localhost:3306/invoicedb";
+		String user = "root";
+		String password = "66wz66wz";
 
 		try {
 			Class.forName(driver);
@@ -112,6 +119,11 @@ public class InvoiceData {
 	 */
 	public static void addEmail(String personCode, String email) {
 		
+		String driver = "com.mysql.jdbc.Driver";
+		String url = "jdbc:mysql://localhost:3306/invoicedb";
+		String user = "root";
+		String password = "66wz66wz";
+
 		try {
 			Class.forName(driver);
 			Connection conn = DriverManager.getConnection(url, user, password);
@@ -132,6 +144,10 @@ public class InvoiceData {
 	 */
 	public static void removeAllCustomers() {
 		
+		String driver = "com.mysql.jdbc.Driver";
+		String url = "jdbc:mysql://localhost:3306/invoicedb";
+		String user = "root";
+		String password = "66wz66wz";
 
 		try {
 			Class.forName(driver);
@@ -155,6 +171,10 @@ public class InvoiceData {
 	public static void addCustomer(String customerCode, String type, String primaryContactPersonCode, String name, 
 			String street, String city, String state, String zip, String country) {
 		
+		String driver = "com.mysql.jdbc.Driver";
+		String url = "jdbc:mysql://localhost:3306/invoicedb";
+		String user = "root";
+		String password = "66wz66wz";
 
 		try {
 			Class.forName(driver);
@@ -184,6 +204,10 @@ public class InvoiceData {
 	 */
 	public static void removeAllProducts() {
 		
+		String driver = "com.mysql.jdbc.Driver";
+		String url = "jdbc:mysql://localhost:3306/invoicedb";
+		String user = "root";
+		String password = "66wz66wz";
 
 		try {
 			Class.forName(driver);
@@ -210,7 +234,11 @@ public class InvoiceData {
 	 * @param assetCode
 	 */
 	public static void removeProduct(String productCode) {
-
+		
+		String driver = "com.mysql.jdbc.Driver";
+		String url = "jdbc:mysql://localhost:3306/invoicedb";
+		String user = "root";
+		String password = "66wz66wz";
 
 		try {
 			Class.forName(driver);
@@ -235,6 +263,10 @@ public class InvoiceData {
 	 */
 	public static void addEquipment(String productCode, String name, Double pricePerUnit) {
 		
+		String driver = "com.mysql.jdbc.Driver";
+		String url = "jdbc:mysql://localhost:3306/invoicedb";
+		String user = "root";
+		String password = "66wz66wz";
 
 		try {
 			Class.forName(driver);
@@ -255,7 +287,11 @@ public class InvoiceData {
 	 * provided data.  
 	 */
 	public static void addLicense(String productCode, String name, double serviceFee, double annualFee) {
-
+		
+		String driver = "com.mysql.jdbc.Driver";
+		String url = "jdbc:mysql://localhost:3306/invoicedb";
+		String user = "root";
+		String password = "66wz66wz";
 
 		try {
 			Class.forName(driver);
@@ -277,6 +313,10 @@ public class InvoiceData {
 	 */
 	public static void addConsultation(String productCode, String name, String consultantPersonCode, Double hourlyFee) {
 		
+		String driver = "com.mysql.jdbc.Driver";
+		String url = "jdbc:mysql://localhost:3306/invoicedb";
+		String user = "root";
+		String password = "66wz66wz";
 
 		try {
 			Class.forName(driver);
@@ -297,6 +337,10 @@ public class InvoiceData {
 	 */
 	public static void removeAllInvoices() {
 		
+		String driver = "com.mysql.jdbc.Driver";
+		String url = "jdbc:mysql://localhost:3306/invoicedb";
+		String user = "root";
+		String password = "66wz66wz";
 
 		try {
 			Class.forName(driver);
@@ -322,6 +366,10 @@ public class InvoiceData {
 	 */
 	public static void removeInvoice(String invoiceCode) {
 		
+		String driver = "com.mysql.jdbc.Driver";
+		String url = "jdbc:mysql://localhost:3306/invoicedb";
+		String user = "root";
+		String password = "66wz66wz";
 
 		try {
 			Class.forName(driver);
@@ -345,6 +393,10 @@ public class InvoiceData {
 	 */
 	public static void addInvoice(String invoiceCode, String customerCode, String salesPersonCode) {
 		
+		String driver = "com.mysql.jdbc.Driver";
+		String url = "jdbc:mysql://localhost:3306/invoicedb";
+		String user = "root";
+		String password = "66wz66wz";
 
 		try {
 			Class.forName(driver);
@@ -367,6 +419,11 @@ public class InvoiceData {
 	 */
 	public static void addEquipmentToInvoice(String invoiceCode, String productCode, int numUnits) {
 		
+		String driver = "com.mysql.jdbc.Driver";
+		String url = "jdbc:mysql://localhost:3306/invoicedb";
+		String user = "root";
+		String password = "66wz66wz";
+
 		try {
 			Class.forName(driver);
 			Connection conn = DriverManager.getConnection(url, user, password);
@@ -388,6 +445,10 @@ public class InvoiceData {
 	 */
 	public static void addLicenseToInvoice(String invoiceCode, String productCode, String startDate, String endDate) {
 		
+		String driver = "com.mysql.jdbc.Driver";
+		String url = "jdbc:mysql://localhost:3306/invoicedb";
+		String user = "root";
+		String password = "66wz66wz";
 
 		try {
 			Class.forName(driver);
@@ -410,6 +471,10 @@ public class InvoiceData {
 	 */
 	public static void addConsultationToInvoice(String invoiceCode, String productCode, double numHours) {
 		
+		String driver = "com.mysql.jdbc.Driver";
+		String url = "jdbc:mysql://localhost:3306/invoicedb";
+		String user = "root";
+		String password = "66wz66wz";
 
 		try {
 			Class.forName(driver);

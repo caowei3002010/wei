@@ -12,7 +12,7 @@ public class TestDriver {
 		ArrayList<Customer> customers = ReaderFile.readCustomers(persons);
 		ArrayList<Product> products = ReaderFile.readProducts(persons);
 
-		DSLinkedList invoices = ReaderFile.readInvoice(persons,customers,products);
+		ArrayList<Invoice> invoices = ReaderFile.readInvoice(persons,customers,products);
 		String ret = "";
 		ret+=String.format("%s", "Invoice");
 		ret+=String.format("%40s", "Customer");
@@ -47,32 +47,12 @@ public class TestDriver {
 		System.out.println();
 		System.out.println();
 		
-		Invoice.setCompareType(Invoice.firstType);
-		invoices=invoices.sort();
-		System.out.println("Individual Invoice Detail Reports Order By First Type");
+
+		System.out.println("Individual Invoice Detail Reports");
 		System.out.println("==================================================");
 		for(int i=0;i<invoices.size();i++){
 			System.out.println(invoices.get(i)+"\n\n\n");
 		}
-		System.out.println();
-		
-		Invoice.setCompareType(Invoice.secondType);
-		invoices=invoices.sort();
-		System.out.println("Individual Invoice Detail Reports Order By Second Type");
-		System.out.println("==================================================");
-		for(int i=0;i<invoices.size();i++){
-			System.out.println(invoices.get(i)+"\n\n\n");
-		}
-		System.out.println();
-		
-		Invoice.setCompareType(Invoice.thirdType);
-		invoices=invoices.sort();
-		System.out.println("Individual Invoice Detail Reports Order By Third Type");
-		System.out.println("==================================================");
-		for(int i=0;i<invoices.size();i++){
-			System.out.println(invoices.get(i)+"\n\n\n");
-		}
-		System.out.println();
 	}
 
 }

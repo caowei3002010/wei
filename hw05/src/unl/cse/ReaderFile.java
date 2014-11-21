@@ -9,14 +9,14 @@ import java.util.ArrayList;
 
 public class ReaderFile {
 	
-	public static String driver = "com.mysql.jdbc.Driver";
-	public static String url = "jdbc:mysql://localhost:3306/wcao";
-	public static String user = "wcao";
-	public static String password = "ZqfP{C";
-	
-	public static DSLinkedList readInvoice(ArrayList<Person> persons,ArrayList<Customer> customers,ArrayList<Product> products) throws IOException{
+	public static ArrayList<Invoice> readInvoice(ArrayList<Person> persons,ArrayList<Customer> customers,ArrayList<Product> products) throws IOException{
 		
-		DSLinkedList ret = new DSLinkedList();
+		ArrayList<Invoice> ret = new ArrayList<Invoice>();
+		
+		String driver = "com.mysql.jdbc.Driver";
+		String url = "jdbc:mysql://localhost:3306/invoicedb";
+		String user = "root";
+		String password = "66wz66wz";
 
 		try {
 			Class.forName(driver);
@@ -70,6 +70,10 @@ public class ReaderFile {
 	public static ArrayList<Person> readPersons() throws IOException{
 		
 		ArrayList<Person> persons = new ArrayList<Person>();
+		String driver = "com.mysql.jdbc.Driver";
+		String url = "jdbc:mysql://127.0.0.1:3306/invoicedb";
+		String user = "root";
+		String password = "66wz66wz";
 
 		try {
 			Class.forName(driver);
@@ -116,6 +120,10 @@ public class ReaderFile {
 	public static ArrayList<Customer> readCustomers(ArrayList<Person> persons) throws IOException{
 		
 		ArrayList<Customer> customers = new ArrayList<Customer>();
+		String driver = "com.mysql.jdbc.Driver";
+		String url = "jdbc:mysql://localhost:3306/invoicedb";
+		String user = "root";
+		String password = "66wz66wz";
 
 		try {
 			Class.forName(driver);
@@ -164,6 +172,10 @@ public class ReaderFile {
 	public static ArrayList<Product> readProducts(ArrayList<Person> persons) throws IOException{
 		
 		ArrayList<Product> products = new ArrayList<Product>();
+		String driver = "com.mysql.jdbc.Driver";
+		String url = "jdbc:mysql://localhost:3306/invoicedb";
+		String user = "root";
+		String password = "66wz66wz";
 
 		try {
 			Class.forName(driver);

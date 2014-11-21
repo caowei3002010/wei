@@ -3,12 +3,7 @@ package unl.cse;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Invoice implements Comparable<Invoice>{
-	
-	public static int compareType=1;
-	public static int firstType=1;
-	public static int secondType=2;
-	public static int thirdType=3;
+public class Invoice {
 	
 	private String InvoiceCode;
 	private String personCode;
@@ -17,10 +12,6 @@ public class Invoice implements Comparable<Invoice>{
 	private Customer customer;
 	
 	private List<Item> items;
-	
-	public static void setCompareType(int compareType) { 
-        Invoice.compareType = compareType; 
-    } 
 	
 	public Invoice(String InvoiceCode, String personCode, String customerCode, List<Person> persons, List<Customer> customers){
 		this.InvoiceCode = InvoiceCode;
@@ -182,36 +173,6 @@ public class Invoice implements Comparable<Invoice>{
 		ret+="TOTAL" + String.format("%100s","$" + this.getTotal());
 		
 		return ret;
-	}
-
-	@Override
-	public int compareTo(Invoice other) {
-		
-		if(Invoice.compareType==1){
-			return -1*this.customer.getName().compareTo(other.customer.getName());
-		}else if(Invoice.compareType==2){
-			if(this.getTotal()>other.getTotal()){
-				return 1;
-			}else if(this.getTotal()<other.getTotal()){
-				return -1;
-			}else{
-				return 0;
-			}
-		}else{
-			if((this.customer.getClass()==Corporate.class && other.customer.getClass()==Corporate.class) || (this.customer.getClass()==Government.class && other.customer.getClass()==Government.class)){
-				if(this.person.getFirstName().equals(other.person.getFirstName())){
-					return other.person.getLastName().compareTo(this.person.getLastName());
-				}else{
-					return other.person.getFirstName().compareTo(this.person.getFirstName());
-				}
-			}else{
-				if(this.customer.getClass()==Corporate.class){
-					return 1;
-				}else{
-					return -1;
-				}
-			}
-		}
 	}
 	
 }
